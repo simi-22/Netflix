@@ -7,6 +7,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import './pages/Homepage/components/Banner/Banner.style.css';
 import './layout/Navbar.style.css';
 
 

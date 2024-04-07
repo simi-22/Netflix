@@ -1,0 +1,48 @@
+
+.banner{
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.banner::before{
+    content: '';
+    background: linear-gradient(to top, black, transparent);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+}
+
+.banner-text-box{
+    width: 70%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+.banner-text-box h1 {
+    margin-bottom: 20px;
+}
+.banner-text-box p {
+    width: 80%;
+}
+.banner-text-box p::first-letter{
+    font-size: 45px;
+    font-weight: bold; 
+    float: left;  
+    height: 64px; 
+    margin-right: 5px;  
+    color: white;  
+    border-radius: 5px;  
+    line-height: 45px; 
+}
+.banner-text-box > * {
+    z-index: 2;
+}
