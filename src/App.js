@@ -16,6 +16,7 @@ import './layout/Navbar.style.css';
 //추천영화 '/movies/:id/recommandation'
 //리뷰 '/movies/:id/reviews'
 
+
 function App() {
   return (
     <Routes>
