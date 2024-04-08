@@ -9,7 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './pages/Homepage/components/Banner/Banner.style.css';
 import './layout/Navbar.style.css';
-
+import './pages/Homepage/components/PopularMovieSlide/PopularMovieSlide.style.css';
+import './pages/Homepage/components/MovieCard/MovieCard.style.css';
 
 //홈'/'
 //영화전체를보여주는페이지(서치) '/movies'
