@@ -1,13 +1,13 @@
 import React from 'react'
-import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies'
+import { useTopRateMoviesQuery } from '../../../../hooks/useTopRateMovies'
 import { Alert } from 'react-bootstrap'
 import MovieCard from '../MovieCard/MovieCard';
 import "slick-carousel/slick/slick-theme.css";
 import 'slick-carousel/slick/slick.css';
 import Slider from 'react-slick';
 
-const PopularMovieSlide = () => {
-    const {data, isLoading, isError, error} = usePopularMoviesQuery()
+const TopRateMovieSlide = () => {
+    const {data, isLoading, isError, error} = useTopRateMoviesQuery()
     
     if(isLoading){
         return <h1>Loading...</h1>
@@ -24,7 +24,7 @@ const PopularMovieSlide = () => {
     };
     return (
     <div id='movie-slide-container'>
-        <h3>Popular Movies</h3>
+        <h3>Top Rate Movies</h3>
         <Slider {...settings} className='movie-slide'>
             {data.results.map((movie, index)=><MovieCard movie={movie} key={index}/>)}
         </Slider>
@@ -32,4 +32,4 @@ const PopularMovieSlide = () => {
   )
 }
 
-export default PopularMovieSlide
+export default TopRateMovieSlide

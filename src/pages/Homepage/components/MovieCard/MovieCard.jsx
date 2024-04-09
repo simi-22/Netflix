@@ -7,14 +7,15 @@ const MovieCard = ({movie}) => {
             alt={movie?.title}/>
         <div className='movie-card-text'>
             <h1>{movie?.title}</h1>
+            <div className='movie-id'>
             {movie?.genre_ids.map((id) => (
                 <p>{id}</p>
             ))}
-            <div className='text-flex-box'>
-                <div>{movie?.vote_average}</div>
-                <div>{movie?.popularity}</div>
-                <div>{movie.adult ? "over18" : "under18"}</div>
             </div>
+            <div className='mini-card-overview'>{movie?.overview}</div>
+            {<div className='vote-average'>⭐️ {movie?.vote_average}</div>
+            /*<div>{movie.adult ? "over18" : "under18"}</div> */}
+            
         </div>
     </div>
   )

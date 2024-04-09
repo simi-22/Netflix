@@ -1,8 +1,8 @@
-#popular-movie h3{
+#movie-slide-container h3{
     max-width: 1200px;
     margin: 10px auto;
 }
-.popular-slide{
+#movie-slide-container .movie-slide{
     max-width: 1200px;
     margin: 0 auto;
     height: 400px;

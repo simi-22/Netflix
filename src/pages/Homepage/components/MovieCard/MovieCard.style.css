@@ -16,7 +16,10 @@
 }
 
 .movie-card-text{
+    display: flex;
     position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
     top: 10px;
     left: 10px;
     width: calc(100% - 20px);
@@ -30,6 +33,7 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .movie-card-text:hover{
@@ -39,6 +43,18 @@
 .movie-card-text h1 {
     font-size: 28px;
 }
-.text-flex-box {
+.movie-id {
     display: flex;
+    display: none;
+}
+.mini-card-overview{
+    height: 48%;
+    font-size: 13px;
+    overflow: hidden;
+}
+.vote-average{
+    text-align: center;
+    border-top: 1px solid #cccccc9e;
+    padding-top: 10px;
+    box-sizing: border-box;
 }
