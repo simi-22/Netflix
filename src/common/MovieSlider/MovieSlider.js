@@ -18,7 +18,32 @@ const MovieSlider = ({title, movies}) => {
         autoplaySpeed: 2500,
         pauseOnHover: true,
         afterChange: () => setUpdateCount(updateCount + 1),
-        beforeChange: (current, next) => setSlideIndex(next)
+        beforeChange: (current, next) => setSlideIndex(next),
+        responsive: [
+            {
+              breakpoint: 1280,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+          ]
       };
     return (
         <div id='movie-slide-container'>

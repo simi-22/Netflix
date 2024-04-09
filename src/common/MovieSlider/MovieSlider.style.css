@@ -1,3 +1,7 @@
+#movie-slide-container {
+  padding: 0 30px;
+  box-sizing: border-box;
+}
 input[type="range"] {
     /* 슬라이더 전체에 대한 스타일 */
     -webkit-appearance: none; /* 기본 스타일 제거 */

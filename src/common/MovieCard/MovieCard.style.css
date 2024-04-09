@@ -53,6 +53,7 @@
 
 .movie-card-text h1 {
     font-size: 28px;
+    margin: 0;
 }
 .movie-id {
     display: flex;
@@ -61,10 +62,10 @@
 }
 .movie-id p {
     margin-right: 5px;
-    background-color: rgba(255, 0, 0, 0.879);
-    padding: 2px;
+    background: rgb(255, 136, 0);
     box-sizing: border-box;
     border-radius: 2px;
+    padding: 2px;
 }
 .mini-card-overview{
     height: 40%;

@@ -24,7 +24,7 @@ const MovieCard = ({movie}) => {
             <h1>{movie?.title}</h1>
             <div className='movie-id'>
             {showGenre(movie.genre_ids).map((id) => (
-                <p>{id}</p>
+                <p className={id}>{id}</p>
             ))}
             </div>
             <div className='mini-card-overview'>{movie?.overview}</div>

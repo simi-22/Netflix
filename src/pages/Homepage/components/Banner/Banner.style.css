@@ -46,3 +46,31 @@
 .banner-text-box > * {
     z-index: 2;
 }
+
+@media (max-width:850px){
+    .banner{
+        background-position: center;
+    }
+    .banner-text-box p {
+        width: 100%;
+    }
+}
+
+@media (max-width:720px){
+    .banner-text-box{
+        width: 100%;
+    }
+    .banner-text-box p {
+        width: 80%;
+    }
+}
+
+@media (max-width:550px){
+    .banner-text-box p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+}
