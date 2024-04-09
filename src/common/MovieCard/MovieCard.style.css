@@ -1,3 +1,13 @@
+#movie-slide-container h3{
+    max-width: 1200px;
+    margin: 10px auto;
+}
+#movie-slide-container .movie-slide{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 .movie-card{
     position: relative;
     height: 100%;
@@ -7,6 +17,7 @@
     padding: 10px;
     box-sizing: border-box;
     outline: none;
+    cursor: pointer;
 }
 .movie-card img{
     width: 100%;
@@ -24,13 +35,13 @@
     left: 10px;
     width: calc(100% - 20px);
     height: calc(100% - 20px);
-    background: #000000ca;
+    background: #2c2c2ce8;
     opacity: 0;
-    transition: all 1s;
+    transition: all .5s;
     color: #fff;
     font-weight: bold;
     overflow-wrap: break-word;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
@@ -45,10 +56,18 @@
 }
 .movie-id {
     display: flex;
-    display: none;
+    font-size: 12px;
+    flex-wrap: wrap;
+}
+.movie-id p {
+    margin-right: 5px;
+    background-color: rgba(255, 0, 0, 0.879);
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 2px;
 }
 .mini-card-overview{
-    height: 48%;
+    height: 40%;
     font-size: 13px;
     overflow: hidden;
 }
