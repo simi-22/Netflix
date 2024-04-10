@@ -14,7 +14,7 @@ const UpcomingMovieSlide = () => {
         return <Alert variant='danger'>{error.message}</Alert>;
     }
     return (
-        <div>
+        <div id='upcoming-movie-container' className='movie-slide-container'>
             <MovieSlider title='Upcoming Movies' movies={data.results} />
         </div>
   )

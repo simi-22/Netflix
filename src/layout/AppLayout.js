@@ -1,21 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Outlet } from 'react-router-dom'; // 자식 컴포넌트가져옴
+import { Outlet, useNavigate } from 'react-router-dom'; // 자식 컴포넌트가져옴
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const AppLayout = () => {
+  const [keyword, setKeyword] = useState("");
+  const navigate = useNavigate();
+
+  const searchByKeyword = (event) => {
+    event.preventDefault();
+    //url바꿔주기
+    navigate(`/movies?q=${keyword}`);
+    setKeyword("");
+  }
+
+
+  const goToHome = () => {
+    navigate('/');
+  }
+
+  const goToGenrePage = () => {
+    navigate('/movies');
+  }
+  const goToReviewPage = () => {
+    navigate('/Review');
+  }
+
+
   return (
     <div id='app-layout'>
-      <Navbar expand="lg">
+      <Navbar expand="lg" className='navbar'>
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Navbar.Brand onClick={goToHome}>
             
               <svg 
               viewBox="0 0 111 30" 
@@ -33,18 +56,20 @@ const AppLayout = () => {
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll>
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Link</Nav.Link>
+              <Nav.Link onClick={goToGenrePage}>Genre</Nav.Link>
+              <Nav.Link onClick={goToReviewPage}>Review</Nav.Link>
               
             </Nav>
-            <Form className="d-flex">
+            <Form className="d-flex" onSubmit={searchByKeyword}>
               <Form.Control
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                value={keyword}
+                onChange={(event) => setKeyword(event.target.value)}
               />
-              <button><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+              <button><FontAwesomeIcon icon={faMagnifyingGlass} type='submit' /></button>
             </Form>
           </Navbar.Collapse>
         </Container>

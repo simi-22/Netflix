@@ -18,10 +18,10 @@ const TopRateMovieSlide = () => {
 
    
     return (
-        <div>
+        <div className='movie-slide-container'>
             <MovieSlider title='Top Rate Movies' movies={data.results} />
         </div>
-     )
+  )
 }
 
 export default TopRateMovieSlide

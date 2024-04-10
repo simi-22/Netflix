@@ -34,6 +34,27 @@ input[type="range"] {
     cursor: pointer; /* 마우스 커서 모양 */
   }
 
+
+  .slick-prev:before, .slick-next:before{
+    font-size: 3rem;
+    color: var(--main-color);
+    opacity: 1;
+    text-shadow: 2px 2px 2px black;
+  }
+
+  .slick-next{
+    right: 15px;
+    z-index: 4;
+  }
+  .slick-prev{
+    left: -15px;
+    z-index: 4;
+  }
+  .movie-slide-container {
+    margin-bottom: 60px;
+  }
+
+
   @media (max-width:800px){
     input[type="range"] {
       width: 50%;

@@ -18,7 +18,7 @@ const PopularMovieSlide = () => {
 
    
     return (
-    <div>
+    <div id='popular-movie-container' className='movie-slide-container'>
         <MovieSlider title='Popular Movies' movies={data.results} />
     </div>
   )

@@ -13,8 +13,8 @@ const Homepage = () => {
   return (
     <div>
       <Banner />
-      <PopularMovieSlide />
       <TopRateMovieSlide />
+      <PopularMovieSlide />
       <UpcomingMovieSlide />
     </div>
   )

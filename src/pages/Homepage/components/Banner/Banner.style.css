@@ -6,6 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
+    margin-bottom: 40px;
 }
 .banner::before{
     content: '';
@@ -18,17 +19,19 @@
 }
 
 .banner-text-box{
-    width: 70%;
+    width: 1200px;
+    margin: 0 auto;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    padding-bottom: 40px;
     height: 100%;
-    padding: 20px 20px;
     box-sizing: border-box;
 }
 .banner-text-box h1 {
     margin-bottom: 20px;
+    font-family: 'GongGothicMedium';
 }
 .banner-text-box p {
     width: 80%;
