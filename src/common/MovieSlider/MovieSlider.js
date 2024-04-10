@@ -37,10 +37,10 @@ const MovieSlider = ({title, movies}) => {
               }
             },
             {
-              breakpoint: 480,
+              breakpoint: 680,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1
+                slidesToScroll: 2
               }
             }
           ]

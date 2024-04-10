@@ -28,3 +28,14 @@
 .navbar-toggler:focus{
     box-shadow: none;
 }
+
+@media (max-width: 750px) {
+    .navbar-brand {
+        width: 120px;
+    }
+}
+@media (max-width: 450px) {
+    .navbar-brand {
+        width: 100px;
+    }
+}

@@ -5,7 +5,7 @@
 input[type="range"] {
     /* 슬라이더 전체에 대한 스타일 */
     -webkit-appearance: none; /* 기본 스타일 제거 */
-    width: 30%; /* 슬라이더의 너비 */
+    width: 40%; /* 슬라이더의 너비 */
     height: 5px; /* 슬라이더의 높이 */
     background: #2c2c2c; /* 슬라이더의 배경색 */
     border: 1px solid #535353; /* 테두리 없음 */
@@ -14,7 +14,7 @@ input[type="range"] {
     margin: 20px auto;
     display: block;
     box-sizing: border-box;
-  }
+}
   
   input[type="range"]::-moz-range-thumb {
     /* 모질라 기반 브라우저 (Firefox)의 슬라이더 핸들 스타일 */
@@ -30,6 +30,24 @@ input[type="range"] {
     -webkit-appearance: none; /* 기본 스타일 제거 */
     width: 20px; /* 핸들의 너비 */
     height: 5px; /* 핸들의 높이 */
-    background: rgb(255, 0, 0); /* 핸들의 배경색 */
+    background: var(--main-color); /* 핸들의 배경색 */
     cursor: pointer; /* 마우스 커서 모양 */
   }
+
+  @media (max-width:800px){
+    input[type="range"] {
+      width: 50%;
+    }
+  }
+
+
+  @media (max-width:480px){
+    .movie-slide button{
+      display: none !important;
+    }
+    input[type="range"] {
+      width: 70%;
+      
+    }
+  }
+  

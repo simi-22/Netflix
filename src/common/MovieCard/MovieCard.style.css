@@ -23,8 +23,6 @@
     width: 100%;
     border-radius: 10px;
 }
-.slick-slide{
-}
 
 .movie-card-text{
     display: flex;
@@ -35,10 +33,10 @@
     left: 10px;
     width: calc(100% - 20px);
     height: calc(100% - 20px);
-    background: #2c2c2ce8;
+    background: #ffffff;
     opacity: 0;
     transition: all .5s;
-    color: #fff;
+    color: black;
     font-weight: bold;
     overflow-wrap: break-word;
     padding: 10px;
@@ -52,13 +50,16 @@
 }
 
 .movie-card-text h1 {
-    font-size: 28px;
+    font-size: 25px;
     margin: 0;
+    font-family: 'GongGothicMedium';
+    text-align: start;
 }
 .movie-id {
     display: flex;
     font-size: 12px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 .movie-id p {
     margin-right: 5px;
@@ -66,15 +67,64 @@
     box-sizing: border-box;
     border-radius: 2px;
     padding: 2px;
+    color: #fff;
 }
 .mini-card-overview{
-    height: 40%;
-    font-size: 13px;
-    overflow: hidden;
+    font-size: 14px;
+    overflow-y: scroll;
+    background-color: #ebebeb;
+    text-align: start;
+    padding: 5px 10px;
+    box-sizing: border-box;
 }
 .vote-average{
     text-align: center;
-    border-top: 1px solid #cccccc9e;
-    padding-top: 10px;
+    border-bottom: 1px solid #cccccc9e;
+    padding: 10px 0;
     box-sizing: border-box;
+}
+.vote-average span{
+    position: relative;
+}
+.vote-average span::after{
+    content: '⭐️';
+    position: absolute;
+    top: -3px;
+    left: -20px;
+}
+.movie-card {
+    text-align: center;
+   
+}
+.movie-card button {
+    font-size: 14px;
+    border:1px solid var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    color: var(--main-color);
+}
+.movie-card button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+@media (max-width:680px) {
+    .movie-card-text h1 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:490px) {
+    .vote-average {
+        border: none;
+        border-top: 1px solid #ebebeb;
+    }
+    .mini-card-button{
+        display: none;
+    }
+    .mini-card-overview{
+        display: none;
+    }
 }

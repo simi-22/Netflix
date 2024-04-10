@@ -28,9 +28,9 @@ const MovieCard = ({movie}) => {
             ))}
             </div>
             <div className='mini-card-overview'>{movie?.overview}</div>
-            {<div className='vote-average'>⭐️ {movie?.vote_average}</div>
-            /*<div>{movie.adult ? "over18" : "under18"}</div> */}
-            
+            <div className='vote-average'><span>{movie?.vote_average}</span></div>
+            {/*<div>{movie.adult ? "over18" : "under18"}</div> */}
+            <div className='mini-card-button'><button>자세히보기</button></div>
         </div>
     </div>
   )
