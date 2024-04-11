@@ -2,6 +2,21 @@
     max-width: 1200px;
     margin: 20px auto;
 }
+#movie-page-container .m-p-title{
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+#movie-page-container .m-p-title p:first-of-type{
+    font-size: 16px;
+    margin: 0;
+}
+#movie-page-container .m-p-title p:nth-of-type(2){
+    display: inline-block;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'GongGothicMedium';
+}
 .m-p-movie-card-wrap{
     display: grid;
     grid-template-columns: repeat(5, 1fr);

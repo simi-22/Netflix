@@ -1,0 +1,21 @@
+#movie-page-container .d-flex{
+    padding: 10px;
+    box-sizing: border-box;
+}
+#movie-page-container .d-flex input{
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 90%;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+#movie-page-container .d-flex .me-2{
+    margin-right: 0 !important;
+}
+#movie-page-container .d-flex button {
+    width: 10%;
+    background-color: var(--main-color);
+}

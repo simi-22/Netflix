@@ -11,22 +11,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const AppLayout = () => {
-  const [keyword, setKeyword] = useState("");
+  // const [keyword, setKeyword] = useState("");
   const navigate = useNavigate();
 
-  const searchByKeyword = (event) => {
-    event.preventDefault();
-    //url바꿔주기
-    navigate(`/movies?q=${keyword}`);
-    setKeyword("");
-  }
+  // const searchByKeyword = (event) => {
+  //   event.preventDefault();
+  //   //url바꿔주기
+  //   navigate(`/movies?q=${keyword}`);
+  //   setKeyword("");
+  // }
 
 
   const goToHome = () => {
     navigate('/');
   }
 
-  const goToGenrePage = () => {
+  const goToMoviePage = () => {
     navigate('/movies');
   }
   const goToReviewPage = () => {
@@ -56,21 +56,11 @@ const AppLayout = () => {
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll>
-              <Nav.Link onClick={goToGenrePage}>Genre</Nav.Link>
+              <Nav.Link>Genre</Nav.Link>
               <Nav.Link onClick={goToReviewPage}>Review</Nav.Link>
               
             </Nav>
-            <Form className="d-flex" onSubmit={searchByKeyword}>
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-                value={keyword}
-                onChange={(event) => setKeyword(event.target.value)}
-              />
-              <button><FontAwesomeIcon icon={faMagnifyingGlass} type='submit' /></button>
-            </Form>
+            <button onClick={goToMoviePage}><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
