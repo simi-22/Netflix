@@ -25,9 +25,31 @@
     max-width: 1200px;
     padding: 20px 0;
 }
+
 .pagination {
     display: inline-block;
     justify-content: center;
+    --bs-pagination-bg: transparent !important;
+    
+}
+.page-item {
+    background: transparent !important;
+}
+
+a.page-link {
+    border: none !important;
+    color: #fff !important;
+}
+.disabled>.page-link, .page-link.disabled {
+    color: black !important;
+    border: none !important;
+}
+.page-link:hover{
+    background-color: var(--main-color) !important;
+    color: #fff !important;
+}
+.active>.page-link, .page-link.active  {
+    background-color: var(--main-color) !important;
 }
 
 @media (max-width:860px) {

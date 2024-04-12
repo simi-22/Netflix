@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useSearchMovieQuery } from '../../hooks/useSearchMovie'
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
+import { useSearchParams } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 import MovieCard from '../../common/MovieCard/MovieCard';
 import '../Movies/Moviepage.style.css'
@@ -20,7 +19,6 @@ import Search from './component/Search';
 const MoviePage = () => {
   //url 쿼리값얻어옴
   const [query, setQuery] = useSearchParams();
-  const navigate = useNavigate();
 
   //페이지네이션
   const [page, setPage] = useState(1);
@@ -77,8 +75,8 @@ const MoviePage = () => {
         </div>
         <div id='pagination-wrap'>
           <ReactPaginate
-          previousLabel="Previous"
-          nextLabel="Next"
+          previousLabel="<"
+          nextLabel=">"
           pageClassName="page-item"
           pageLinkClassName="page-link"
           previousClassName="page-item"
@@ -89,8 +87,8 @@ const MoviePage = () => {
           breakClassName="page-item"
           breakLinkClassName="page-link"
           pageCount={data?.total_pages}//전체페이지
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={5}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={3}
           onPageChange={handlePageClick}
           containerClassName="pagination"
           activeClassName="active"

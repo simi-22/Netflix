@@ -1,0 +1,83 @@
+#movie-detail-page {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#movie-detail-page .detail-top-wrap{
+    position: relative;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    box-sizing: border-box;
+}
+#movie-detail-page .detail-top {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#movie-detail-page .detail-top > div:nth-of-type(1){
+    width: 25%;
+    margin-right: 20px;
+}
+#movie-detail-page .detail-top > div:nth-of-type(2){
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffffe2;
+    color: black;
+    width: 80%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#movie-detail-page .detail-top > div:nth-of-type(2) ul{
+    padding-left: 0;
+}
+#movie-detail-page .detail-top img{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* 장르뱃지 */
+#movie-detail-page .detail-top .mdp-genre{
+    display: flex;
+}
+#movie-detail-page .detail-top .mdp-genre li {
+    margin-right: 5px;
+    background-color: rgb(255, 166, 0);
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+#movie-detail-page .detail-top .mdp-short-ov{
+    display: flex;
+    margin-bottom: 40px;
+}
+#movie-detail-page .detail-top .mdp-short-ov li {
+    position: relative;
+    margin-right: 20px;
+}
+#movie-detail-page .detail-top .mdp-short-ov li::after{
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: -10px;
+    width: 2px;
+    height: 14px;
+    background-color: rgb(130, 130, 130);
+}
+#movie-detail-page .detail-top .mdp-short-ov li:last-of-type::after{
+    background-color: transparent;
+}
+#movie-detail-page .detail-top  .mdp-overview li:first-of-type{
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family:sans-serif;
+}
+#movie-detail-page .detail-top  .mdp-overview li:nth-of-type(2){
+    padding:30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #ffffffd8;
+}
