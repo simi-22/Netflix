@@ -7,6 +7,7 @@ import { Outlet, useNavigate } from 'react-router-dom'; // 자식 컴포넌트�
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import Footer from './Footer';
 
 const AppLayout = () => {
   // const [keyword, setKeyword] = useState("");
@@ -58,6 +59,7 @@ const AppLayout = () => {
         </Container>
       </Navbar>
       <Outlet />
+      <Footer />
     </div>
   )
 }

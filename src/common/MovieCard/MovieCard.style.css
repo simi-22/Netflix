@@ -119,11 +119,26 @@
     background-color: var(--main-color);
     color: #fff;
 }
+@media (max-width:970px) {
+    .movie-card {
+        width: 70%;
+    }
+    .slick-slide{
+        width: 135px !important;
+    }
+    .slick-slide > div {
+        width: 200px;
+    }
+}
 
 @media (max-width:680px) {
     .movie-card-text h1 {
         font-size: 20px;
     }
+    
+    /* .movie-card img{
+        width: 80%;
+    } */
 
 }
 

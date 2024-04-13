@@ -3,7 +3,7 @@ import api from "../utils/api";
 
 const fetchTrailer = (queryData) => {
   const id = queryData.queryKey[1];
-  return api.get(`/movie/${id}/videos`);
+  return api.get(`/movie/${id}/videos?language=ko-KR`);
 };
 
 export const useTrailerQuery = (id) => {

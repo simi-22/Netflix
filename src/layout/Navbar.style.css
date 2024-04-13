@@ -34,6 +34,12 @@
     box-shadow: none;
 }
 
+#footer {
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid #ffffff56;
+    margin-top: 70px;
+}
 @media (max-width: 750px) {
     .navbar-brand {
         width: 120px;

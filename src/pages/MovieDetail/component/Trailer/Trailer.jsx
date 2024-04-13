@@ -24,15 +24,15 @@ const Trailer = () => {
     }
     
     const opts = {
-        height: '600',
-        width: '1000',
+        height: '100%',
+        width: '100%',
         };
 
 
   return (
     <div id='trailer'>
         <h2>Trailer</h2>
-        <div><YouTube videoId={data.key} opts={opts}/></div>
+        <div className='video-wrap'><YouTube videoId={data.key} opts={opts} className='video'/></div>
     </div>
   )
 }

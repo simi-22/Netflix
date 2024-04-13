@@ -3,7 +3,7 @@ import api from "../utils/api";
 
 const fetchMovieDetail = (queryData) => {
   const id = queryData.queryKey[1];
-  return api.get(`/movie/${id}`);
+  return api.get(`/movie/${id}?language=ko-KR`);
 };
 
 export const useDetailMovieQuery = (id) => {

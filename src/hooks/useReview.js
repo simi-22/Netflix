@@ -11,8 +11,8 @@ export const useReviewQuery = (id) => {
   return useQuery({
     queryKey: ["movie-review", id],
     queryFn: fetchReview,
-    // select: (data) => {
-    //   return data.data;
-    // },
+    select: (data) => {
+      return data.data;
+    },
   });
 };

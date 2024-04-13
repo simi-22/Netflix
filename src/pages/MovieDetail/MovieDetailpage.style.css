@@ -101,9 +101,18 @@
         align-items: center;
     }
 }
-@media (max-width:760){
+@media (max-width:760px){
+    #movie-detail-page .detail-top > div:nth-of-type(1) {
+        width: 50%;
+    }
+    #movie-detail-page .detail-top .mdp-overview li:first-of-type {
+        font-size: 20px;
+    }
     #movie-detail-page .detail-top .mdp-overview li:nth-of-type(2){
-        overflow: hidden;
-        height: 400px;
+        height: 200px;
+        overflow-x: auto;
+    }
+    #movie-detail-page .detail-top > div:nth-of-type(2){
+        width: 100%;
     }
 }
