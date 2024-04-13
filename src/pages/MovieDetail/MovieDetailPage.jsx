@@ -6,6 +6,8 @@ import './MovieDetailpage.style.css';
 import Actor from './component/Actor/Actor';
 import './component/Actor/Actor.style.css';
 import Recommendation from './component/recommendation/Recommendation';
+import Trailer from './component/Trailer/Trailer';
+import Review from './component/Review/Review';
 
 const MovieDetailPage = () => {
   const { id } = useParams();
@@ -62,12 +64,9 @@ const MovieDetailPage = () => {
           <Recommendation />
         </div>
             
-        <div>
-          <h2>트레일러</h2>
-          <div>동영상</div>
-        </div>
-        <div>배우</div>
-        <div>Review</div>
+        <Trailer />
+
+        <Review />
         </div>
       </div>
   )

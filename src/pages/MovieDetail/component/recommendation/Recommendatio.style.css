@@ -1,10 +1,13 @@
 #recommendation-movie {
     width: 50%;
 }
+#recommendation-movie h3 {
+    font-size: 20px;
+}
 #recommendation-movie .movie-card .order-number{
     display: none;
 }
-#recommendation-movie .slick-prev:before, .slick-next:before {
+#recommendation-movie .slick-prev:before, #recommendation-movie .slick-next:before {
     display: none;
 }
 #recommendation-movie input{
@@ -13,10 +16,14 @@
 #recommendation-movie ul {
     padding-left: 0;
 }
-#recommendation-movie .movie-card-text h1{
-    font-size: 13px;
+#recommendation-movie .movie-card:hover{
+    transform:scale(1.1)
 }
-#recommendation-movie .movie-id {
+#recommendation-movie .movie-card-text{
+    /* font-size: 13px; */
+    display: none;
+}
+/* #recommendation-movie .movie-id {
     margin-top: 5px;
 }
 #recommendation-movie .movie-id p{
@@ -33,4 +40,4 @@
 }
 #recommendation-movie  .mini-card-button{
     display: none;
-}
+} */

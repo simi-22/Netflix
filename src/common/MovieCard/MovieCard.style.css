@@ -15,6 +15,7 @@
     overflow: hidden;
     margin-right: 20px;
     padding: 10px;
+    padding-left: 10px;
     box-sizing: border-box;
     outline: none;
     cursor: pointer;

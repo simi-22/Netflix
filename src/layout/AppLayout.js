@@ -29,8 +29,8 @@ const AppLayout = () => {
   const goToMoviePage = () => {
     navigate('/movies');
   }
-  const goToReviewPage = () => {
-    navigate('/Review');
+  const goToGenrePage = () => {
+    navigate('/Genre');
   }
 
 
@@ -56,8 +56,7 @@ const AppLayout = () => {
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll>
-              <Nav.Link>Genre</Nav.Link>
-              <Nav.Link onClick={goToReviewPage}>Review</Nav.Link>
+              <Nav.Link onClick={goToGenrePage}>Genre</Nav.Link>
               
             </Nav>
             <button onClick={goToMoviePage}><FontAwesomeIcon icon={faMagnifyingGlass}/></button>

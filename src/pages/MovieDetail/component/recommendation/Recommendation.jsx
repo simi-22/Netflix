@@ -18,7 +18,7 @@ const Recommendation = () => {
 
     
     
-    console.log('vvv',data.results)
+    // console.log('vvv',data.results)
 
     const Recommendations = data.results.map(reco => (
         <li key={reco.title}>

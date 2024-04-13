@@ -17,6 +17,7 @@ const MovieSlider = ({title, movies}) => {
         autoplay: true,
         autoplaySpeed: 2500,
         pauseOnHover: true,
+        swipeToSlide: true,
         afterChange: () => setUpdateCount(updateCount + 1),
         beforeChange: (current, next) => setSlideIndex(next),
         responsive: [

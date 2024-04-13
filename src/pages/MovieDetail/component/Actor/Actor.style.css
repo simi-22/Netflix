@@ -4,6 +4,7 @@
     scrollbar-width: none;
 }
 #cast-list h3 {
+    font-size: 20px;
     margin: 10px 0;
 }
 #cast-list ul {
@@ -17,10 +18,11 @@
     border-radius: 10px;
     width: 170px;
     padding: 10px;
+    padding-left: 0;
 }
 #cast-list ul li img {
-    width: 100px;
-    border-radius: 5px;
+    width: 118px;
+    border-radius: 10px;
 }
 #cast-list ul li p:first-of-type{
     font-weight: bold;
@@ -31,15 +33,15 @@
 #cast-list ul li div {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 0px;
     background-color: #ffffffa7;
     color: black;
     padding: 5px;
     box-sizing: border-box;
     /* height: calc(100%-10px); */
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     height: calc(100% - 20px);
-    border-radius: 5px;
+    border-radius: 10px;
     opacity: 0;
     cursor: pointer;
 }
