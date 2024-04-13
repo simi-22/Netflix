@@ -4,7 +4,7 @@ import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies'
 
 const Banner = () => {
   const {data, isLoading, isError, error} = usePopularMoviesQuery();
-  console.log(data); 
+  // console.log(data); 
 
   if(isLoading){
     <h1>Loading...</h1>

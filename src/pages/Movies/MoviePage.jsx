@@ -80,7 +80,7 @@ const MoviePage = () => {
   }, [genre]);
 
 
-  console.log('aaa',data);
+  // console.log('aaa',data);
 
 
   if(isLoading){
