@@ -47,8 +47,6 @@ const MovieSlider = ({title, movies}) => {
       };
     return (
         <div id='movie-slide-container'>
-            {/* <p>Total updates: {updateCount} </p> */}
-       
             <h3>{title}</h3>
             <Slider ref={slider => {
                 sliderRef = slider;

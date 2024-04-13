@@ -21,29 +21,24 @@ const MovieDetailPage = () => {
   }
 
 
-  const DetailData = data;
+
   // console.log('vvv', DetailData.data);
-  const genreNames = DetailData.data.genres;
-  const companyName = DetailData.data.production_companies[0].name;
+  const genreNames = data.genres;
+  const companyName = data.production_companies[0].name;
   // console.log(companyName)
 
-  // console.log(genreNames);
-  let posterBackDrop = {
-    width: "100%",
-    height: "400px",
-    backgroundImage: `url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${DetailData.data?.backdrop_path}) alt={DetailData.data?.title} cover`,
-  };
+  
 
   return (
     <div id='movie-detail-page'>
       <div className='movie-detail-page-container'>
-        <div className='detail-top-wrap' style={{backgroundImage:`url( https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${DetailData.data?.backdrop_path})`}}>
+        <div className='detail-top-wrap' style={{backgroundImage:`url( https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${data?.backdrop_path})`}}>
           <div className='detail-top'>
             <div>
-              <img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${DetailData.data?.poster_path}`} alt={DetailData.data?.title}/>
+              <img src={`https://media.themoviedb.org/t/p/w600_and_h900_bestv2${data?.poster_path}`} alt={data?.title}/>
             </div>
             <div>
-              <h1>{DetailData.data?.title}</h1>
+              <h1>{data?.title}</h1>
               <ul className='mdp-genre'>
                 {genreNames.map(genre => (
                   <li key={genre.id}>{genre.name}</li>
@@ -51,26 +46,22 @@ const MovieDetailPage = () => {
               </ul>
               <ul className='mdp-short-ov'>
                 <li>{companyName}</li>
-                <li>⭐️{DetailData.data?.vote_average}(🗳️{DetailData.data?.vote_count})</li>
-                <li>{DetailData.data?.release_date}</li>
+                <li>⭐️{data?.vote_average}(🗳️{data?.vote_count})</li>
+                <li>{data?.release_date}</li>
               </ul>
               <ul className='mdp-overview'>
-                <li>" {DetailData.data?.tagline} "</li>
-                <li>{DetailData.data?.overview}</li>
+                <li>" {data?.tagline} "</li>
+                <li>{data?.overview}</li>
               </ul>
             </div>
           </div>
         </div>
+
+        <div className='mdp-cast-reco'>
           <Actor />
           <Recommendation />
-
-
-          <h2>관련 영화</h2>
-          <ul>
-            <li>영화 카드</li>
-          </ul>
-        
-        
+        </div>
+            
         <div>
           <h2>트레일러</h2>
           <div>동영상</div>

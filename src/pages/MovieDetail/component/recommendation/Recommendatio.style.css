@@ -1,0 +1,36 @@
+#recommendation-movie {
+    width: 50%;
+}
+#recommendation-movie .movie-card .order-number{
+    display: none;
+}
+#recommendation-movie .slick-prev:before, .slick-next:before {
+    display: none;
+}
+#recommendation-movie input{
+    display: none;
+}
+#recommendation-movie ul {
+    padding-left: 0;
+}
+#recommendation-movie .movie-card-text h1{
+    font-size: 13px;
+}
+#recommendation-movie .movie-id {
+    margin-top: 5px;
+}
+#recommendation-movie .movie-id p{
+    font-size: 10px;
+    padding: 1px;
+}
+#recommendation-movie .mini-card-overview{
+    display: none;
+}
+#recommendation-movie .vote-average{
+    padding-bottom: 5px;
+    font-size: 15px;
+    border: none;
+}
+#recommendation-movie  .mini-card-button{
+    display: none;
+}

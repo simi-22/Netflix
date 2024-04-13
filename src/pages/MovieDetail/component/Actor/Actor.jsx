@@ -20,15 +20,17 @@ const Actor = () => {
       const characters = CastRange.data.cast.map(actor => (
         <li key={actor.name}>
           <img src={`https://image.tmdb.org/t/p/w276_and_h350_face${actor.profile_path}`} alt={actor.name}/>
-          <p>{actor.name}</p>
-          <p>{actor.character}</p>
+          <div>
+            <p>{actor.name}</p>
+            <p>{actor.character}</p>
+          </div>
         </li>
       ));
     //   console.log(characters);
 
   return (
     <div id='cast-list'>
-        <h1>Cast</h1>
+        <h3>Cast</h3>
         <ul>
            {characters}
         </ul>

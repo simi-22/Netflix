@@ -81,3 +81,8 @@
     border-radius: 5px;
     background-color: #ffffffd8;
 }
+#movie-detail-page .mdp-cast-reco{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+}

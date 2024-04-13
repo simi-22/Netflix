@@ -2,6 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useRecommendationQuery } from '../../../../hooks/useRecommendation';
 import { Alert } from 'react-bootstrap';
+import MovieSlide from '../../../../common/MovieSlider/MovieSlider'
+import './Recommendatio.style.css'
 
 const Recommendation = () => {
     const { id } = useParams();
@@ -15,10 +17,10 @@ const Recommendation = () => {
     }
 
     
-    const RecoRange = data;
-    console.log('vvv',RecoRange.data.results)
+    
+    console.log('vvv',data.results)
 
-    const Recommendations = RecoRange.data.results.map(reco => (
+    const Recommendations = data.results.map(reco => (
         <li key={reco.title}>
           <img src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${reco.poster_path}`} alt={reco.title}/>
         </li>
@@ -27,7 +29,11 @@ const Recommendation = () => {
   return (
     <div id='recommendation-movie'>
         <ul>
-            {Recommendations}
+          <MovieSlide
+            title="recommendation Movies"
+            movies={data.results}
+            responsive={Recommendations}
+          />
         </ul>
     </div>
   )
