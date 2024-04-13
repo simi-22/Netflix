@@ -66,7 +66,7 @@ const MovieDetailPage = () => {
             
         <Trailer />
 
-        <Review />
+        <Review id={id}/>
         </div>
       </div>
   )

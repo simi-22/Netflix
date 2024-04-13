@@ -18,6 +18,11 @@ const Trailer = () => {
 
     // console.log('vvv', data)
 
+     // 데이터가 존재하지 않거나 key 속성이 없는 경우
+     if (!data || !data.key) {
+        return <Alert variant='danger'>Trailer not found</Alert>;
+    }
+    
     const opts = {
         height: '600',
         width: '1000',

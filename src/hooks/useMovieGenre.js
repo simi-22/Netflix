@@ -9,7 +9,9 @@ export const useMovieGenreQuery = () => {
     return useQuery({
         queryKey:['movie-genre'],
         queryFn: fetchMovieGenre,
-        select : (result) => result.data.genres,
+        select: (data) => {
+            return data.data.genres;
+          },
         staleTime: 300000 //잦은 호출 방지
     });
 };

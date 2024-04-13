@@ -19,3 +19,14 @@
     width: 10%;
     background-color: var(--main-color);
 }
+
+/* sort */
+#dropdown-basic{
+    background-color: transparent;
+    border: none;
+    outline:none;
+}
+.dropdown{
+    background-color: var(--main-color);
+    border-radius: 5px;
+}

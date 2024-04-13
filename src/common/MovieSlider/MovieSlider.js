@@ -54,7 +54,7 @@ const MovieSlider = ({title, movies}) => {
                 }}{...settings} 
                 className='movie-slide'
             >
-                {movies.map((movie, index)=><MovieCard movie={movie} key={index} orderNumber={index + 1} />)}
+                {movies.map((movie, index)=><MovieCard movie={movie} key={movie.id} orderNumber={index + 1} />)}
             </Slider>
             <input
             onChange={e => sliderRef.slickGoTo(e.target.value)}

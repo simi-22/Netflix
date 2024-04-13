@@ -3,7 +3,7 @@ import api from "../utils/api";
 
 const fetchRecommendation = (queryData) => {
   const id = queryData.queryKey[1];
-  return api.get(`/movie/${id}/recommendations`);
+  return api.get(`/movie/${id}/similar`);
 };
 
 export const useRecommendationQuery = (id) => {

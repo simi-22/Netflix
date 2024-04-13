@@ -36,6 +36,9 @@ const MovieCard = ({movie, orderNumber}) => {
             {showGenre(movie.genre_ids).map((id) => (
                 <p className={id}>{id}</p>
             ))}
+            {/* {items.map(item => (
+              <li key={item.id}>{item.name}</li>
+            ))} */}
             </div>
           </div>
           <div className='mini-card-overview'>{movie?.overview}</div>

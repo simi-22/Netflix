@@ -30,7 +30,7 @@ const Recommendation = () => {
     <div id='recommendation-movie'>
         <ul>
           <MovieSlide
-            title="recommendation Movies"
+            title="Similar Movies"
             movies={data.results}
             responsive={Recommendations}
           />

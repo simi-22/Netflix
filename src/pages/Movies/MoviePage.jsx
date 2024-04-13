@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSearchMovieQuery } from '../../hooks/useSearchMovie'
 import { useSearchParams } from 'react-router-dom';
-import { Alert } from 'react-bootstrap';
+import { Alert, Col, Row } from 'react-bootstrap';
 import MovieCard from '../../common/MovieCard/MovieCard';
 import '../Movies/Moviepage.style.css'
 import ReactPaginate from 'react-paginate';
 
 import Search from './component/Search';
+import Sort from './component/Sort';
 
 
 //경로 두가지
@@ -19,19 +20,66 @@ import Search from './component/Search';
 const MoviePage = () => {
   //url 쿼리값얻어옴
   const [query, setQuery] = useSearchParams();
-
-  //페이지네이션
-  const [page, setPage] = useState(1);
-  //키워드
+  const [sort, setSort] = useState("");
   const keyword = query.get("q");
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState(null);
+  const [genre, setGenre] = useState(null);
 
-  const handlePageClick = ({selected}) => {
-    setPage(selected + 1)
-  }
+  const handlePageClick = ({ selected }) => {
+    setPage(selected + 1);
+    setSort("");
+    setGenre(null);
+  };
 
-  const {data, isLoading, isError, error} = useSearchMovieQuery({
-    keyword, page
+  const {
+    isLoading,
+    isError,
+    error,
+    data: searchData,
+  } = useSearchMovieQuery({
+    keyword,
+    page,
   });
+
+  const sortMovie = () => {
+    if (sort === "asc") {
+      const sortedData = data.results.sort(
+        (a, b) => a.popularity - b.popularity
+      );
+      setData({ ...data, results: sortedData });
+      return;
+    }
+    const sortedData = data.results.sort((a, b) => b.popularity - a.popularity);
+    setData({ ...data, results: sortedData });
+  };
+
+  const filterMovieByGenre = () => {
+    const filteredData = data.results.filter((movie) => {
+      return movie.genre_ids.includes(genre.id);
+    });
+    setData({ ...data, results: filteredData });
+  };
+
+  useEffect(() => {
+    if (searchData) {
+      setData(searchData);
+    }
+  }, [searchData]);
+
+  useEffect(() => {
+    if (sort !== "") {
+      sortMovie();
+    }
+  }, [sort]);
+
+  useEffect(() => {
+    if (genre) {
+      filterMovieByGenre();
+    }
+  }, [genre]);
+
+
   console.log('aaa',data);
 
 
@@ -50,29 +98,32 @@ const MoviePage = () => {
       {/* 검색을 했을 경우에만 */}
      {keyword ?
       <div className='m-p-title'>
-        <p>Showing {data.total_results} results for</p>
+        {data && data.total_results && (
+          <p>Showing {data.total_results} results for</p>
+        )}
         <p>{keyword}</p>
       </div>
       : ''}
 
       <Search />
+
+      
       <div>
         <div>
-          <select className='genre-filter'>
-            <option>장르1</option>
-            <option>장르2</option>
-          </select>
-          <select className=''>
-            <option>인기순</option>
-            <option>최신순</option>
-            <option>평점높은순</option>
-            <option>평점낮은순</option>
-          </select>
+        <Sort sort={sort} setSort={setSort} genre={genre} setGenre={setGenre} />
+      {data?.results.length === 0 ? (
+        <div>{keyword} 와 일치하는 영화가 없습니다.</div>
+      ) : (
+        <Row>
+          {data?.results.map((movie, index) => (
+            <Col lg={3} xs={6} key={index} className="movie-card-box">
+              <MovieCard movie={movie} />
+            </Col>
+          ))}
+        </Row>
+      )}
         </div>
-        <div className='m-p-movie-card-wrap'>{data?.results.map((movie, index) => 
-          <div key={index}><MovieCard movie={movie}/></div>
-          )}
-        </div>
+        
         <div id='pagination-wrap'>
           <ReactPaginate
           previousLabel="<"

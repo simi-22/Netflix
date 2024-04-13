@@ -3,6 +3,7 @@ import api from "../utils/api";
 
 const fetchReview = (queryData) => {
   const id = queryData.queryKey[1];
+  console.log("Movie ID:", id);
   return api.get(`/movie/${id}/reviews`);
 };
 

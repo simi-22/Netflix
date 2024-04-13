@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Outlet, useNavigate } from 'react-router-dom'; // 자식 컴포넌트가져옴
@@ -29,10 +27,6 @@ const AppLayout = () => {
   const goToMoviePage = () => {
     navigate('/movies');
   }
-  const goToGenrePage = () => {
-    navigate('/Genre');
-  }
-
 
   return (
     <div id='app-layout'>
@@ -56,7 +50,7 @@ const AppLayout = () => {
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll>
-              <Nav.Link onClick={goToGenrePage}>Genre</Nav.Link>
+              <Nav.Link onClick={goToMoviePage}>Genre</Nav.Link>
               
             </Nav>
             <button onClick={goToMoviePage}><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
