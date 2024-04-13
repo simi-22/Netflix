@@ -107,20 +107,20 @@ const MoviePage = () => {
 
       <Search />
 
-      
+
       <div>
         <div>
         <Sort sort={sort} setSort={setSort} genre={genre} setGenre={setGenre} />
       {data?.results.length === 0 ? (
         <div>{keyword} 와 일치하는 영화가 없습니다.</div>
       ) : (
-        <Row>
+        <div className="m-p-movie-card-wrap">
           {data?.results.map((movie, index) => (
-            <Col lg={3} xs={6} key={index} className="movie-card-box">
+            <div key={index} >
               <MovieCard movie={movie} />
-            </Col>
+            </div>
           ))}
-        </Row>
+        </div>
       )}
         </div>
         

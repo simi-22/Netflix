@@ -41,3 +41,9 @@
 #recommendation-movie  .mini-card-button{
     display: none;
 } */
+
+@media (max-width:980px){
+    #recommendation-movie {
+        width: 100%;
+    }
+}
