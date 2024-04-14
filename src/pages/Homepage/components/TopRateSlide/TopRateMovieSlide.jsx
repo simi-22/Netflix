@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import 'slick-carousel/slick/slick.css';
 // import Slider from 'react-slick';
 import MovieSlider from '../../../../common/MovieSlider/MovieSlider';
+import './TopRateMovieSlide.style.css'
 
 const TopRateMovieSlide = () => {
     const {data, isLoading, isError, error} = useTopRateMoviesQuery()
@@ -18,8 +19,8 @@ const TopRateMovieSlide = () => {
 
    
     return (
-        <div className='movie-slide-container'>
-            <MovieSlider title='Top Rate Movies' movies={data.results} />
+        <div className='movie-slide-container' id='top-rate-movie'>
+            <MovieSlider title='Top Rate Movies' movies={data.results}/>
         </div>
   )
 }

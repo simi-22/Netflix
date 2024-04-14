@@ -1,3 +1,9 @@
 #popular-movie-container .movie-card .order-number{
     display: none;
 }
+
+@media (max-width:970px) {
+    #popular-movie-container .movie-card {
+        width: 70%;
+    }
+}

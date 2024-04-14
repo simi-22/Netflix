@@ -120,9 +120,6 @@
     color: #fff;
 }
 @media (max-width:970px) {
-    .movie-card {
-        width: 70%;
-    }
     .slick-slide{
         width: 135px !important;
     }

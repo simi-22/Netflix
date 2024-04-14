@@ -47,3 +47,8 @@
         width: 100%;
     }
 }
+@media (max-width:970px) {
+    #recommendation-movie .movie-card {
+        width: 70%;
+    }
+}
