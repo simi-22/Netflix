@@ -15,7 +15,7 @@ React-Router페이지구현, 커스텀 훅을 만들어 api 호출
 
 ## Axios
 node.js 와 browser 를 위한 Http 통신 라이브러리
-    npm install axios
+```npm install axios```
 
 ### 4가지 메소드
 1.GET : 서버에서 어떤 데이터를 가져와서 보여줌
