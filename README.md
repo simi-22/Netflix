@@ -9,7 +9,14 @@ TMDB API
 Netlify
 
 ### Works
-React-Router페이지구현, 커스텀 훅을 만들어 api 호출
+* React-Router페이지구현, 커스텀 훅을 만들어 api 호출
+* 상세페이지
+* 검색페이지
+* 장르필터링
+
+
+
+
 
 ---
 
